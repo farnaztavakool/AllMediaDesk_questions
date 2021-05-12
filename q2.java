@@ -38,6 +38,7 @@ public class q2 {
                         chars[pointer2] = (char)(chars[pointer2]-1);
                         chars[pointer1] = '9';
                         pointer2-=1;
+                        if (pointer2 == -1) break;
                     }
                     else {
                         for(int j = 0; j <= pointer1;j++) {
@@ -55,7 +56,6 @@ public class q2 {
                     s = new String(Arrays.copyOfRange(chars,pointer1+1,size));
                     return Integer.parseInt(s);
                 }
-                System.out.println(chars[pointer1]+" "+pointer1+s);
                 chars[pointer1] -=1;
                 break;
                 // System.out.println(s);
@@ -75,6 +75,7 @@ public class q2 {
     public static void main(String[] args){
         System.out.println(LastNumber(11123));
         System.out.println(LastNumber(111110));
+        System.out.println(LastNumber(33245));
         
     }
 }
