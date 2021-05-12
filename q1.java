@@ -47,6 +47,8 @@ public class q1 {
         while (i < size) {
         //for (int i = 0; i < size; i++) {
             String val = op_list.get(i);
+                       
+
 
             if(val.equals("(")) {
                 start = i+1;
@@ -64,7 +66,6 @@ public class q1 {
                 i++;
                 
             }
-            
             else if(val.equals("*") || val.equals("/")) {
                 double operand2 = Double.parseDouble(op_list.get(i+1));
                 
@@ -74,11 +75,12 @@ public class q1 {
 
                 }
                 else {
-                    res = operand1 / operand2;
+                    res = (double)(operand1 / operand2);
+                   
                     operand1 = res;
 
                 }
-                i++;
+                i+=2;
                 //op_list.set(i+1,String.valueOf(res)) ;
             } 
 
@@ -96,6 +98,7 @@ public class q1 {
                 i++;
             }
             else {
+                //System.out.println("error"+val);
                 operand1 = Double.parseDouble(val);
                 i++;
             }
@@ -110,6 +113,10 @@ public class q1 {
         System.out.println(calculator("2*3"));
         System.out.println(calculator("1+2*3"));
         System.out.println(calculator("(1+2)*3"));
+        System.out.println(calculator("(1+2+3)*3"));
+        System.out.println(calculator("(5+8)*3/8+10"));
+
+        
 
 
         
