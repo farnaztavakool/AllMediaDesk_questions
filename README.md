@@ -14,7 +14,7 @@ Solution explanation for question1: <br/>
 5) if we have ( the function will loop operate recursively to calculate the values that are inside the ()
 6) if we have + or - the function will keep the first operand and the operator and will recurse through the rest of the remaining arrays to calculate the other operations. once it returns it will add the calculated the result and the first operand that it had kept </br>
 
-Solution explanation for question2: <br/>]
+Solution explanation for question2: <br/>
 
 1) The function will first translate the given integer to a string and then to an array of characters
 2) the function will loop through the array and ,expect for the first element, it will check if the character is bigger than the character befor it
