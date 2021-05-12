@@ -33,17 +33,20 @@ public class q2 {
                     break;
                 }
                 if (chars[pointer2] >= chars[pointer1]) {
-                    if (chars[pointer2] > 1) {
+                    if (chars[pointer1] > '1') {
 
                         chars[pointer2] = (char)(chars[pointer2]-1);
                         chars[pointer1] = '9';
                         pointer2-=1;
                     }
                     else {
-                        for(int j = 0; j <= pointer2;j++) {
+                        for(int j = 0; j <= pointer1;j++) {
                             chars[j] = '9';
+                           
                         }
-                        break;
+                         s = new String(Arrays.copyOfRange(chars,1,size));
+                        return Integer.parseInt(s);
+
                     }
                 }
             }
@@ -52,8 +55,9 @@ public class q2 {
                     s = new String(Arrays.copyOfRange(chars,pointer1+1,size));
                     return Integer.parseInt(s);
                 }
-                
+                System.out.println(chars[pointer1]+" "+pointer1+s);
                 chars[pointer1] -=1;
+                break;
                 // System.out.println(s);
             }
         }
@@ -69,6 +73,8 @@ public class q2 {
 
 
     public static void main(String[] args){
-        System.out.println(LastNumber(2));
+        System.out.println(LastNumber(11123));
+        System.out.println(LastNumber(111110));
+        
     }
 }
